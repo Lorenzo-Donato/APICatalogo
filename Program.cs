@@ -20,7 +20,8 @@ if (string.IsNullOrEmpty(mySqlConnection))
 builder.Services.AddDbContext<AppDbContext>(options =>
         options.UseMySql(
             mySqlConnection, 
-            ServerVersion.AutoDetect(mySqlConnection)));
+            ServerVersion.AutoDetect(mySqlConnection)
+        ));
 
 
 

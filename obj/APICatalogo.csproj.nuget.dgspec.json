@@ -1,25 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "/home/lorenzo/Projects/DotNet/APICatalogo/APICatalogo.csproj": {}
+    "C:\\Users\\loren\\Desktop\\cursoAspNet\\APICatalogo\\APICatalogo.csproj": {}
   },
   "projects": {
-    "/home/lorenzo/Projects/DotNet/APICatalogo/APICatalogo.csproj": {
+    "C:\\Users\\loren\\Desktop\\cursoAspNet\\APICatalogo\\APICatalogo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/lorenzo/Projects/DotNet/APICatalogo/APICatalogo.csproj",
+        "projectUniqueName": "C:\\Users\\loren\\Desktop\\cursoAspNet\\APICatalogo\\APICatalogo.csproj",
         "projectName": "APICatalogo",
-        "projectPath": "/home/lorenzo/Projects/DotNet/APICatalogo/APICatalogo.csproj",
-        "packagesPath": "/home/lorenzo/.nuget/packages/",
-        "outputPath": "/home/lorenzo/Projects/DotNet/APICatalogo/obj/",
+        "projectPath": "C:\\Users\\loren\\Desktop\\cursoAspNet\\APICatalogo\\APICatalogo.csproj",
+        "packagesPath": "C:\\Users\\loren\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\loren\\Desktop\\cursoAspNet\\APICatalogo\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/home/lorenzo/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\loren\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -78,11 +85,15 @@
               "version": "[8.0.24, 8.0.24]"
             },
             {
-              "name": "Microsoft.NETCore.App.Host.linux-x64",
+              "name": "Microsoft.NETCore.App.Host.win-x64",
               "version": "[8.0.24, 8.0.24]"
             },
             {
               "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.24, 8.0.24]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
               "version": "[8.0.24, 8.0.24]"
             }
           ],
@@ -94,7 +105,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.103/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
