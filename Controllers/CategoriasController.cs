@@ -20,4 +20,15 @@ public class CategoriasController : ControllerBase
     {
         return _context.Categorias.ToList();
     }
+
+    [HttpGet("id:int", Name = "ObterCategoria")]
+    public ActionResult<Categoria> Get(int id)
+    {
+        var categoria = _context.Categorias.FirstOrDefault(p => p.CategoriaId == id);
+        if (categoria is null)
+        {
+            return NotFound("Categoria nula");
+        }
+        return Ok(categoria);
+    }
 }
