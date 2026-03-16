@@ -1,7 +1,10 @@
 using System;
+using System.Security.Cryptography.X509Certificates;
 using APICatalogo.Context;
 using APICatalogo.Models;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace APICatalogo.Controllers;
 
@@ -21,6 +24,12 @@ public class CategoriasController : ControllerBase
         return _context.Categorias.ToList();
     }
 
+    [HttpGet("produtos")]
+    public ActionResult<IEnumerable<Categoria>> GetCategoriasProdutos()
+    {
+        return _context.Categorias.Include(p => p.Produtos).ToList();
+    }
+
     [HttpGet("id:int", Name = "ObterCategoria")]
     public ActionResult<Categoria> Get(int id)
     {
@@ -29,6 +38,48 @@ public class CategoriasController : ControllerBase
         {
             return NotFound("Categoria nula");
         }
+        return Ok(categoria);
+    }
+
+    [HttpPost]
+    public ActionResult Post(Categoria categoria)
+    {
+        if (categoria is null)
+        {
+            return BadRequest("Cateoria nula");
+        }
+
+        _context.Categorias.Add(categoria);
+        _context.SaveChanges();
+
+        return new CreatedAtRouteResult("ObterCategoria", new { id = categoria.CategoriaId }, categoria);
+    }
+
+    [HttpPut("{id:int}")]
+    public ActionResult Put(int id, Categoria categoria)
+    {
+        if (id != categoria.CategoriaId)
+        {
+            return BadRequest("Categoria não encontrada");
+        }
+        
+        _context.Entry(categoria).State = EntityState.Modified;
+        _context.SaveChanges();
+        return Ok();
+    }   
+
+    [HttpDelete("id:int")]
+    public ActionResult<Categoria> Delete(int id)
+    {
+        var categoria = _context.Categorias.FirstOrDefault(p => p.CategoriaId == id);
+
+        if (categoria is null)
+        {
+            return NotFound("Categoria não encontrada...");
+        }
+
+        _context.Categorias.Remove(categoria);
+        _context.SaveChanges();
         return Ok(categoria);
     }
 }
