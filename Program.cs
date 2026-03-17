@@ -1,6 +1,7 @@
 using System.Text.Json.Serialization;
 using APICatalogo.Context;
 using APICatalogo.Extensions;
+using APICatalogo.Filters;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -26,7 +27,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
             ServerVersion.AutoDetect(mySqlConnection)
         ));
 
-
+builder.Services.AddScoped<ApiLoggingFilter>();
 
 var app = builder.Build();
 
