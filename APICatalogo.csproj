@@ -17,6 +17,7 @@
     <Folder Include="Context/" />
     <Folder Include="Controllers/" />
     <Folder Include="Models/" />
+    <Folder Include="Validations\" />
   </ItemGroup>
 
 </Project>

@@ -321,3 +321,9 @@ C:\Users\loren\Desktop\MyStuff\Programming\dotnet\ApiCatalogo\APICatalogo\obj\De
 C:\Users\loren\Desktop\MyStuff\Programming\dotnet\ApiCatalogo\APICatalogo\obj\Debug\net8.0\APICatalogo.pdb
 C:\Users\loren\Desktop\MyStuff\Programming\dotnet\ApiCatalogo\APICatalogo\obj\Debug\net8.0\APICatalogo.genruntimeconfig.cache
 C:\Users\loren\Desktop\MyStuff\Programming\dotnet\ApiCatalogo\APICatalogo\obj\Debug\net8.0\ref\APICatalogo.dll
+C:\Users\loren\Desktop\MyStuff\Programming\dotnet\ApiCatalogo\APICatalogo\bin\Debug\net8.0\Microsoft.Extensions.Caching.Memory.dll
+C:\Users\loren\Desktop\MyStuff\Programming\dotnet\ApiCatalogo\APICatalogo\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\loren\Desktop\MyStuff\Programming\dotnet\ApiCatalogo\APICatalogo\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\loren\Desktop\MyStuff\Programming\dotnet\ApiCatalogo\APICatalogo\bin\Debug\net8.0\Microsoft.Extensions.Logging.dll
+C:\Users\loren\Desktop\MyStuff\Programming\dotnet\ApiCatalogo\APICatalogo\bin\Debug\net8.0\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\loren\Desktop\MyStuff\Programming\dotnet\ApiCatalogo\APICatalogo\bin\Debug\net8.0\Microsoft.Extensions.Options.dll
