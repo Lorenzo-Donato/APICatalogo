@@ -25,15 +25,8 @@ public class CategoriasController : ControllerBase
     [ServiceFilter(typeof(ApiLoggingFilter))]
     public ActionResult<IEnumerable<Categoria>> Get()
     {
-        try
-        {
+    
             return _context.Categorias.AsNoTracking().ToList();
-        }
-        catch (Exception)
-        {
-            return StatusCode(StatusCodes.Status500InternalServerError,
-                "Ocorreu um erro ao tratar sua solicitação.");
-        }
     }
 
     [HttpGet("produtos")]
@@ -46,8 +39,6 @@ public class CategoriasController : ControllerBase
     [HttpGet("id:int", Name = "ObterCategoria")]
     public ActionResult<Categoria> Get(int id)
     {
-        try
-        {
         var categoria = _context.Categorias.FirstOrDefault(p => p.CategoriaId == id);
         
         if (categoria is null)
@@ -55,13 +46,8 @@ public class CategoriasController : ControllerBase
             return NotFound("Categoria nula");
         }
         return Ok(categoria);     
-        }
-        catch (Exception)
-        {
-            return StatusCode(StatusCodes.Status500InternalServerError,
-                "Ocorreu um problema ao tratar sua soliitação.");
-        }
     }
+
 
     [HttpPost]
     public ActionResult Post(Categoria categoria)
